@@ -6,4 +6,11 @@ public class RotationsPerMinuteCalc {
         return WheelRPM;
 
     }
+    public static double calcSecondaryRPM(double rpmInital) {
+        double rpmRatio = Double.parseDouble(System.getenv("RPMRatio"));
+
+        double secondaryRPM = rpmInital * rpmRatio;
+        return secondaryRPM;
+    }
+
 }
